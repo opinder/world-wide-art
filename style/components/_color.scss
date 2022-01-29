@@ -1,0 +1,137 @@
+// Utility Color Classes
+
+//.success {
+//
+//}
+
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+
+
+
+$red: (
+  "base":      #DC5D55,
+  "lighten":  #FCEEED
+);
+
+
+$blue: (
+  "base":      #3947D9,
+  "darken":  #216acd,
+  "lighten":  #EBECFB
+);
+
+$green: (
+  "base":     #19E3B1,
+  "base1":     #048B53,
+  "lighten":  #E5F8F0
+);
+$purple: (
+  "base":       #713BDB,
+  "lighten":  #F0EBFC
+);
+$navyblue: (
+  "base":       #5f64fe,
+  "lighten":  #E5F5FF
+);
+
+$darkblue: (
+  "base":      #1A1952
+);
+$orange: (
+  "base":       #FF642E,
+  "lighten":  #FFEFE9,
+  
+);
+$pink: (
+  "base":       #FB5080,
+  "lighten":  #FFEDF2,
+  "dark-1":#712C63
+);
+$yellow: (
+  "base":       #FFCB00,
+  "lighten":  #FFF9E0
+);
+$grey: (
+  "base":       #000000,
+  "base1":       #1E1E2D,
+  "lighten-1":  #212121,
+  "lighten-2":  #434343,
+  "lighten-3":  #333333,
+  "lighten-4": #616161,
+  "lighten-5" : #bdbdbd,
+  "lighten-6" : #D6D6D6,
+  "lighten-7":  #f0f0f0,
+  "lighten-8":  #f4f4f4,
+  "lighten-9":  #F5F5F5,
+  "lighten-10": #E9EBED,
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #ffffff,
+  "transparent":  transparent
+);
+
+$colors: (
+  "red": $red,
+  "blue": $blue,
+  "darkblue": $darkblue,
+  "green": $green,
+  "orange": $orange,
+  "grey": $grey,
+  "purple": $purple,
+  "navyblue": $navyblue,
+  "pink": $pink,
+  "yellow": $yellow,
+  "shades": $shades
+) !default;
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+  .#{$color} {
+    background-color: $color_value !important;
+  }
+  .#{$color}-text {
+    color: $color_value !important;
+  }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @return null;
+}
+
