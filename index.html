@@ -9,59 +9,399 @@
 	<link rel="stylesheet" type="text/css" href="style/index.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/owl.navigation.js"></script>
 </head>
 
 <body>
-	
+
+<script>
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:6,
+				nav:true,
+				loop:false
+			}
+		}
+		});
+	});
+
+	$(document).ready(function(){
+		$('.owl-carousel-audi').owlCarousel({
+		loop:true,
+		margin:10,
+		responsiveClass:true,
+		items:1,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:1,
+				nav:true,
+				loop:false
+			}
+		}
+		});
+	});
+</script>
+
 <header>
-	<div class="">
-		 <nav class="navbar navbar-expand-md navbar-dark">
-		  <!-- Brand -->
-		  <a class="navbar-brand" href="#"></a>
+	<div class="container">
+		<div class="header-outer">
+			<div class="logo-outer">
+				<img src="images/logo.png" />
+			</div>
+			<div class="header-right">
+				<nav class="navbar navbar-expand-md navbar-dark">
+				<!-- Brand -->
 
-		  <!-- Toggler/collapsibe Button -->
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		  <!-- Navbar links -->
-		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav justify-content-end">
-		      <li class="nav-item">
-		        <a class="nav-link" href="#world">NATIONWIDE</a>
-		      </li>
-		      <!--li class="nav-item">
-		        <a class="nav-link" href="#sur">SURVIVOR</a>
-		      </li-->
-		      <li class="nav-item">
-		        <a class="nav-link" href="#imp">How Can we Help</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#what">SURVIVOR</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#cont">Contact us</a>
-		      </li>
-		    </ul>
-		  </div>
-		</nav> 
+				<!-- Navbar links -->
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav justify-content-end">
+					<li class="nav-item">
+						<a class="nav-link" href="#banner">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About Show</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#testimonils">Testimonils</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+					</ul>
+				</div>
+				</nav>
+				<div class="header-phone">
+					<img src="images/phone-icon.png" />
+					<a> (+91) 123-4567890 </a>
+				</div>
+			</div>
+		</div>
 	</div>
 </header>
 
-<div class="banner-outer float-left w-100">
-	<h4 class="wow fadeInRight"> 
-		“Stay strong, stay positive, and never give up.”
-		<span> ― Roy T. Bennett, The Light in the Heart </span>
- 	</h4>
+<div class="banner-outer">
+	<div class="banner-left">
+		<img src="images/banner-left.png" />
+		<h1> Auditions Are Open Now! </h1>
+		<a href="#"> registration now! </a>
+	</div>
 </div>
 
-<footer class="float-left w-100 bg-black btm-footer">
+<section>
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<p> acid attack @ 2019 </p>
+		<div class="about-main">
+			<div class="about-left">
+				<div class="sub-heading">
+					<h2> About show </h2>
+					<div class="sub-heading-border"></div>
+				</div>
+				<div class="about-p">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+					</p>
+				</div>
+			</div>
+			<div class="about-right">
+				<img src="images/about-img.png" />
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="portfolio-outer">
+	<div class="container">
+		<div class="sub-heading">
+			<h2> Our Portfolio </h2>
+			<div class="sub-heading-border"></div>
+		</div>
+		<nav>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"> <span> Dancing </span></button>
+				<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Singing</button>
+				<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Acting</button>
+				<button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Drawing</button>
+				<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Mimicry</button>
+				<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Rapping</button>
+				<button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Shabad</button>
+				<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Poetry</button>
+				<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Gatka</button>
+				<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Yoga</button>
+				<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">View All</button>
+			</div>
+		</nav>
+	</div>
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+			<div class="prot-outer">
+				<div class="port-img">
+					<img src="images/por-1.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-2.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-3.jpg" />
+				</div>
+			</div>
+			<div class="prot-outer">
+				<div class="port-img">
+					<img src="images/por-4.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-5.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-6.jpg" />
+				</div>
+			</div>
+			<div class="prot-outer">
+				<div class="port-img">
+					<img src="images/por-7.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-8.jpg" />
+				</div>
+				<div class="port-img">
+					<img src="images/por-9.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2</div>
+		<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="sub-heading">
+			<h2> Official Promo </h2>
+			<div class="sub-heading-border"></div>
+		</div>
+		<div class="official-video">
+			<img src="images/official-video.png" />
+			<img class="pop-girl" src="images/official-girl.png" />
+		</div>
+	</div>
+</section>
+
+<section class="auditions-outer">
+	<div class="container">
+		<div class="sub-heading">
+			<h2> Auditions Category </h2>
+			<div class="sub-heading-border"></div>
+		</div>
+	</div>
+		<div class="owl-carousel">
+			<div class="auditions-img">
+				<img src="images/audi-1.png" />
+				<h5> Dancing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-2.png" />
+				<h5> Dancing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-3.png" />
+				<h5> Singing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-4.png" />
+				<h5> Singing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-5.png" />
+				<h5> Drawing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-6.png" />
+				<h5> Acting </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-1.png" />
+				<h5> Dancing </h5>
+			</div>
+			<div class="auditions-img">
+				<img src="images/audi-2.png" />
+				<h5> Dancing </h5>
+			</div>
+		</div>
+	
+</section>
+
+<section class="open-outer">
+	<div class="container">
+		<div class="sub-heading">
+			<h2> Auditions open now </h2>
+			<div class="sub-heading-border"></div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices, gravida. Risus commodo viverra maecenas.
+			</p>
+		</div>
+		<div class="">
+			<div class="auditions-img">
+				<img src="images/w.png" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="open-outer">
+	<div class="container">
+		<div class="sub-heading">
+			<h2> price list </h2>
+		</div>
+		<div class="pay-outer">
+			<ul>
+				<li>
+					<h4> 1st Round </h4>
+					<a href="#"> Free </a>
+				</li>
+				<li>
+					<h4> 2nd Round </h4>
+					<a href="#"> Pay </a>
+				</li>
+				<li>
+					<h4> 3rd Round </h4>
+					<a href="#"> Pay </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="yellow-bg-outer">
+	<div class="container">
+		<div class="yellow-bg-inner">
+			<p class="yellow-bg-inner-p">
+				<span> Cash Prices Up To Rs 5 Lakhs </span>
+			</p>
+			<p>
+				Will Be Distributed To First (1,50,000),Second(1,00000)And Third Position(5,0000) For All Events.
+			</p>
+			<p>
+				All The Candidates Will <span> Get MEDALS, TROPHIES, CERTIFICATES </span> And Can Be Given A Chance In A Short Movie, TV Serial ,Web Series, Video And Singing Album Etc
+			</p>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="footer-main">
+
+			<div class="footer-left">
+				<div class="sub-heading">
+					<h2> Contact us </h2>
+					<div class="sub-heading-border"></div>
+				</div>
+				<div class="footer-left-ul">
+					<ul>
+						<li>
+							<img src="images/icon-location.png" />
+							<p> Friends Enclave,Punjabi University, New Bus Stand,Patiala,Punjab,147002 </p>
+						</li>
+						<li class="footer-left-ul-mail">
+							<img src="images/icon-mail.png" />
+							<p> iafs.wwap@gmail.com </p>
+						</li>
+						<li>
+							<img src="images/icon-phone.png" />
+							<p> +91 76278-56001 </p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-right">
+				<div class="sub-heading">
+					<h2> Contact form </h2>
+					<div class="sub-heading-border"></div>
+				</div>
+				<div class="footer-input">
+					<input type="text" placeholder="Name" />
+				</div>
+				<div class="footer-input">
+					<input type="text" placeholder="Last name" />
+				</div>
+				<div class="footer-input">
+					<input type="text" placeholder="Email" />
+				</div>
+				<div class="footer-input">
+					<input type="text" placeholder="Mobile" />
+				</div>
+				<div class="footer-input">
+					<select>
+						<option> Select your Category </option>
+					</select>
+				</div>
+				<div class="footer-input">
+					<input type="text" placeholder="Comments" />
+				</div>
+				<div class="footer-submit">
+					<input type="submit" value="SUBMIT" />
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer-btm">
+			<div class="footer-btm-left">
+				<img src="images/footer-logo-copy.png" />
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. suspendisse ultrices gravida. sis. 
+				</p>
+			</div>
+			<div class="footer-btm-mid">
+				<h4> LINKS </h4>
+				<ul>
+					<li> <a href="#"> <img src="images/footer-arrow.png" /> Home </a> </li>
+					<li> <a href="#"> <img src="images/footer-arrow.png" /> About </a> </li>
+					<li> <a href="#"> <img src="images/footer-arrow.png" /> Portfolio </a> </li>
+					<li> <a href="#"> <img src="images/footer-arrow.png" /> Contact us </a> </li>
+				</ul>
+			</div>
+			<div class="footer-btm-right">
+				<h4> Follow us </h4>
+				<ul>
+					<li> <a href="#"> <img src="images/sol1.png" />  </a> </li>
+					<li> <a href="#"> <img src="images/sol2.png" />  </a> </li>
+					<li> <a href="#"> <img src="images/sol3.png" />  </a> </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-end">
+		<p> © Copyright 2021 your website.com </p>
 	</div>
 </footer>
 
