@@ -18,7 +18,7 @@ header{
     width: 100%;
     left: 0px;
     top: 0px;
-    z-index: 2;
+    z-index: 9;
 }
 .header-outer {
     display: flex;
@@ -36,6 +36,10 @@ header{
                     a{
                         color: #fff !important;
                         padding: 10px 17px !important;
+
+                        &:hover{
+                            color: #dcb64f !important;
+                        }
                     }
                 }
             }
@@ -60,7 +64,7 @@ header{
     .banner-left{
         position: absolute;
         left: 10%;
-        top: 0px;
+        top: 80px;
         bottom: 0px;
         width: 500px;
         height: 480px;
@@ -131,6 +135,7 @@ section{
 
 .about-left {
     padding-right: 140px;
+    width: 60%;
 }
 
 section.portfolio-outer{
@@ -140,7 +145,13 @@ section.portfolio-outer{
         margin-top: 60px;
         margin-bottom: 60px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        white-space: nowrap;
+        flex-wrap: inherit;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding-left: 15px;
 
         .nav-link{
             font-size: 18px;
@@ -407,6 +418,9 @@ li.footer-left-ul-mail img {
         border-bottom: 1px solid #bebebe;
     }
 }
+.footer-input select option{
+    color: #000;
+}
 .footer-submit{
     width: 100%;
     display: inline-block;
@@ -464,6 +478,10 @@ li.footer-left-ul-mail img {
                     color: #fff;
                     font-size: 17px;
                     padding-left: 20px;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
 
                 img{
@@ -506,5 +524,129 @@ li.footer-left-ul-mail img {
         text-align: center;
         margin: 0px;
         padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .banner-outer .banner-left{
+        width: 220px;
+        height: 317px;
+    }
+    .banner-outer .banner-left h1{
+        font-size: 20px;
+        margin: 18px 0px;
+    }
+    .banner-outer .banner-left a{
+        font-size: 16px;
+    }
+    .pay-outer ul{
+        padding: 0px;
+    }
+    .owl-carousel {
+        padding: 0px 5%;
+    }
+    .container{
+        max-width: 100%;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .about-main{
+        display: inline-block;
+    }
+    .about-left{
+        padding: 0px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .official-video img.pop-girl{
+        width: 300px;
+    }
+    .open-outer .sub-heading{
+        padding: 0px;
+    }
+    .pay-outer ul li h4{
+        font-size: 24px;
+    }
+    .pay-outer ul li a{
+        font-size: 24px;
+        min-width: 160px;
+    }
+    .about-right {
+        width: 100%;
+        text-align: center;
+    }
+    footer .footer-left{
+        width: 100%;
+    }
+    footer .footer-right{
+        width: 100%;
+        margin-top: 40px;
+    }
+    footer .footer-main{
+        display: inline-block;
+    }
+    .footer-btm{
+        margin-top: 80px;
+        display: inline-block;
+    }
+    .footer-btm .footer-btm-left{
+        width: 100%;
+    }
+    .footer-btm .footer-btm-mid{
+        width: 100%;
+        margin: 40px 0px;
+    }
+    .footer-btm-right{
+        width: 100% !important;
+        display: inline-block;
+    }
+    .auditions-outer .owl-carousel .owl-nav{
+        display: none;
+    }
+
+    .header-outer .header-right nav {
+        margin: 0px;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 100%;
+        justify-content: end;
+        
+        .navbar-collapse{
+            background: rgba(255, 255, 255, 0.9);
+        }
+    }
+    .header-outer .header-right nav ul li a{
+        color: #000 !important;
+    }
+    button.navbar-toggler {
+        margin-right: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .official-video img.pop-girl {
+        width: 200px;
+    }
+    .banner-outer .banner-left {
+        left: 0px;
+        right: 0px;
+        z-index: 2;
+    }
+    .banner-outer::after {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        content: "";
+        z-index: 1;
     }
 }
