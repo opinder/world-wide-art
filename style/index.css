@@ -847,6 +847,12 @@ li.footer-left-ul-mail img {
   z-index: 9;
 }
 
+.about-main.services-main .about-left {
+  padding-right: 0px;
+  width: 60%;
+  padding-left: 140px;
+}
+
 @media screen and (max-width: 1100px) {
   .banner-outer .banner-left {
     width: 220px;
